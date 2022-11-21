@@ -2,8 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import { images } from '../../constants'
+import { AppWrap } from '../../wrapper'
 
-import s from '../../styles/components/Header/_header.module.scss'
+import '../../styles/components/Header/_header.scss'
+
+
 
 const scaleVariants = {
   whileInView : {
@@ -16,27 +19,27 @@ const scaleVariants = {
   }
 }
 
-export default function Header() {
+const Header = () => {
   return (
-    <div className={`${s.app__header} ${s.app__flex}`} id='home'>
-      <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1]}} transition={{ duration: 0.5 }} className={s.app__headerInfo}>
-        <div className={s.app__headerBadge}>
-          <div className={`${s.badgeCmp} ${s.app__flex}`}>
+    <div className={`app__header app__flex`}>
+      <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1]}} transition={{ duration: 0.5 }} className="app__headerInfo">
+        <div className="app__headerBadge">
+          <div className={`badgeCmp app__flex`}>
             <div>
-              <p className={s.pText}>Hello 👋, I am</p>
-              <h1 className={s.headText}>Martín Fogliacco</h1>
+              <p className="pText">Hello 👋, I am</p>
+              <h1 className="headText">Martín Fogliacco</h1>
             </div>
           </div>
 
-          <div className={`${s.tagCmp} ${s.app__flex}`}>
-            <p className={s.pText}>Full Stack Developer</p>
+          <div className={`tagCmp app__flex`}>
+            <p className="pText">Full Stack Developer</p>
           </div>
         </div>
       </motion.div>
       
-      <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className={s.app__headerCircles}>
+      <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className="app__headerCircles">
         {[images.react, images.redux, images.sass, images.node, images.psql, images.git].map((circle, index) => (
-          <div className={`${s.circleCmp} ${s.app__flex}`} key={`circle-${index}`}>
+          <div className={`circleCmp app__flex`} key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>
         ))}
@@ -45,3 +48,5 @@ export default function Header() {
     </div>
   )
 }
+
+export default AppWrap(Header, 'home')

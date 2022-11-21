@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
-import s from '../../styles/components/Navbar/_navbar.module.scss'
+import '../../styles/components/Navbar/_navbar.scss'
 
 import { images } from '../../constants'
 
@@ -11,29 +11,26 @@ export default function Navbar() {
 
 
   return (
-    <nav className={s.app__navbar}>
-        <div className={s.app__navbarLogo}>
+    <nav className="app__navbar">
+        <div className="app__navbarLogo">
             <img src={images.logoLight} alt="LOGO" />
         </div>
 
-        <ul className={s.app__navbarLinks}>
+        <ul className="app__navbarLinks">
             {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-                <li key={`link-${item}`} className={`${s.app__flex} ${s.pText}`}>
+                <li key={`link-${item}`} className={`app__flex pText`}>
                     <div></div>
                     <a href={`#${item}`}>{item}</a>
                 </li>
             ))}
         </ul>
 
-        <div className={s.app__navbarMenu}>
+        <div className="app__navbarMenu">
                 <HiMenuAlt4 onClick={() => setToggle(true)}/>
 
                 {
                     toggle && (
-                        <motion.div
-                        whileInView={{ x : [300, 0] }}
-                        transition={{ duration: 0.85, ease: 'easeOut' }}
-                        >
+                        <motion.div whileInView={{ x : [300, 0] }} transition={{ duration: 0.85, ease: 'easeOut' }}>
                             <HiX onClick={() => setToggle(false)}/>
                             <ul>
                             {['home', 'about', 'work', 'skills', 'contact'].map((item) => (

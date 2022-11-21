@@ -1,4 +1,4 @@
-@import './styles/abstracts/variables.module';
+@import './styles/abstracts/variables';
 
 .app {
     background-color: $background-color;
@@ -54,7 +54,7 @@
     }
   }
   
-  .head-text {
+  .headText {
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
@@ -74,10 +74,9 @@
     }
   }
   
-  .p-text {
-    font-size: 0.8rem;
+  .pText {
+    font-size: 1rem;
     text-align: left;
-    color: var(--gray-color);
     line-height: 1.5;
   
     @media screen and (min-width: 2000px) {
@@ -85,10 +84,9 @@
     }
   }
   
-  .bold-text {
+  .boldText {
     font-size: 1rem;
     font-weight: 800;
-    color: var(--black-color);
     text-align: left;
   
     @media screen and (min-width: 2000px) {
@@ -159,11 +157,11 @@
   
     padding: 1rem;
   
-    .app__navigation-dot {
+    .app__navigationDot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: #cbcbcb;
+      background-color: #ff0000;
       margin: 0.5rem;
   
       transition: background-color 0.2s ease-in-out;
