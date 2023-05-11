@@ -5,12 +5,15 @@ import { RiMoonLine as Moon } from 'react-icons/ri'
 import Spain from '../assets/espana.png';
 import Argentina from '../assets/argentina.png';
 import UnitedKingdom from '../assets/reino-unido.png';
+// import Laptop from '../assets/Laptop.png'
+import Laptop from '../assets/Laptop.png';
 
 export {
-    Menu,
     Spain,
     Argentina,
     UnitedKingdom,
+    Laptop,
+    Menu,
     Sun,
     Moon,
 }

@@ -1,4 +1,5 @@
 @import '../../scss/abstracts/mixins.scss';
+@import '../../scss/abstracts/variables.scss';
 
 .home__container{
     height: 100vh;
@@ -28,6 +29,7 @@
             transform: translate(-40%, -200%);
 
             .home__keepScrolling{
+                font-family: $poppins;
                 @include centerDivsRow;
                 color: #f5f5f5f5;
                 font-size: 20px; 
@@ -37,12 +39,14 @@
                 
                 div{
                     @include centerDivsCol;
+                    font-family: $poppins;
                     align-items: flex-end;
 
                         span{
                             color: #f5f5f5; 
                             margin: 0 5px 0 0;
-                            font-size: 18px;
+                            font-size: 20px;
+                            font-weight: 600;
                         }
                         h4{
                             color: #f5f5f5;
@@ -73,7 +77,8 @@
                 font-weight: 700;
             }
             .home__list{
-                height:50px;
+                font-family: $poppins;
+                height: 50px;
                 overflow:hidden;
                 margin-left: 1rem;
                 color: rgb(245, 245, 245, .7);
@@ -90,9 +95,25 @@
                   }
 
                 & div:first-child {
-                animation: text-animation 8s infinite;
+                    animation: text-animation 30s infinite;
                 }
             }
+        }
+   
+    }
+
+    .home__imgContainer{
+        position: absolute;
+        top:0;
+        height: 200vh;
+        width: 200vw;
+        z-index: 20;
+        transform: translate(-25%, -25%);
+
+        .home__screenSection{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
         }
     }
 
@@ -157,19 +178,14 @@
         }
     }
 
-
-
-  
-
-
   
   @keyframes text-animation {
     0% {margin-top: 0;}
     10% {margin-top: 0;}
     20% {margin-top: -5.62rem;}
     30% {margin-top: -5.62rem;}
-    40% {margin-top: -11.24rem;}
-    60% {margin-top: -11.24rem;}
+    40% {margin-top: 0;}
+    50% {margin-top: 0;}
     70% {margin-top: -5.62rem;}
     80% {margin-top: -5.62rem;}
     90% {margin-top: 0;}

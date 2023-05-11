@@ -1,27 +1,51 @@
 import React, { useState, useEffect } from 'react';
-import './Home.scss';
-
-import { Argentina } from '../../constants/icons';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import UseAnimations from 'react-useanimations';
 import arrowDown from 'react-useanimations/lib/arrowDown';
 
+import { Argentina, Laptop } from '../../constants/icons';
+import './Home.scss';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const [hour, setHour] = useState('')
 
   useEffect(() => {
     
-    function mostrarHora() {
-      const hora = new Date().toLocaleTimeString('es-AR');
-      setHour(hora)
+    function showHour() {
+      const hour = new Date().toLocaleTimeString('es-AR');
+      setHour(hour)
     }
-    mostrarHora()
-    setInterval(mostrarHora, 60000);
+    showHour()
+    setInterval(showHour, 60000);
     
-  }, [])
+  }, []);
 
-  console.log(hour)
-  
+  useEffect(() => {
+    gsap.to('.home__imgContainer', {
+      scale: 0.5,
+      ease: 'ease',
+      scrollTrigger: {
+        trigger: '.home__container',
+        scrub: 1,
+        start: 'top top',
+        end: 'bottom',
+        pin: true,
+      },
+    });
+
+    gsap.to('.txt-bottom', {
+      autoAlpha: 0,
+      letterSpacing: -10,
+      duration: 2,
+      scrollTrigger: {
+        start: 2,
+      },
+    });
+  }, []);
+
   
   return (
     <div className='home__container'>
@@ -31,7 +55,6 @@ const Home = () => {
           <div className="home__list">
             <div><div>Full Stack Developer</div></div>
             <div><div>UX / UI Designer</div></div>
-            <div><div>Informatic Technician</div></div>
           </div>
         </div>
         <div className="home__information">
@@ -60,6 +83,62 @@ const Home = () => {
         <div></div>
         <div></div>
         <div></div>
+      </div>
+
+      <div className="home__imgContainer">
+        <img src={Laptop} alt="" className='home__screenSection' />
+      </div>
+
+      <div className='txt-bottom'>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
+        <h2>PRUEBA</h2>
       </div>
     </div>
   )

@@ -1,8 +1,10 @@
+@import '../abstracts/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html{
+    scroll-behavior: smooth;
     body{
         font-family: 'Montserrat', sans-serif;
-        background-color: rgb(20 21 24);
+        background-color: $midnight-black;
     }
 }
