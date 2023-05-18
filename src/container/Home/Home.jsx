@@ -35,15 +35,6 @@ const Home = () => {
         pin: true,
       },
     });
-
-    gsap.to('.txt-bottom', {
-      autoAlpha: 0,
-      letterSpacing: -10,
-      duration: 2,
-      scrollTrigger: {
-        start: 2,
-      },
-    });
   }, []);
 
   
@@ -87,58 +78,6 @@ const Home = () => {
 
       <div className="home__imgContainer">
         <img src={Laptop} alt="" className='home__screenSection' />
-      </div>
-
-      <div className='txt-bottom'>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
       </div>
     </div>
   )

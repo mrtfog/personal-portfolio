@@ -1,4 +1,6 @@
 @import '../../scss/abstracts/mixins.scss';
+@import '../../scss/abstracts/variables.scss';
+
 
 .nav{
     position: fixed;
@@ -52,4 +54,52 @@
         margin: 0 5px 0 5px;
         cursor: pointer;
     }
+}
+
+$bar-width: 45px;
+$bar-height: 4px;
+$bar-spacing: 10px;
+$bar-color: #fff;
+$bar-crossed-rotate: 45deg;
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__bar {
+    position: relative;
+    width: $bar-width;
+    height: $bar-height;
+    background-color: $bar-color;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+
+
+    &:not(:last-child) {
+      margin-bottom: $bar-spacing;
+    }
+
+  }
+
+  &--crossed {
+    .menu-icon__bar {
+        transition: all .2s ease-in-out;
+
+        &:first-child {
+        transform: rotate($bar-crossed-rotate) translate(9.5px);
+        }
+
+        &:last-child {
+        transform: rotate(-$bar-crossed-rotate) translate(9.5px);
+        }
+    }
+  }
+
+  
+  &:hover .menu-icon__bar {
+    background-color: $light-gray;
+  }
 }

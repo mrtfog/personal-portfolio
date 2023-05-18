@@ -95,7 +95,7 @@
                   }
 
                 & div:first-child {
-                    animation: text-animation 30s infinite;
+                    animation: text-animation 8s infinite;
                 }
             }
         }
@@ -113,7 +113,7 @@
         .home__screenSection{
             height: 100%;
             width: 100%;
-            object-fit: contain;
+            object-fit: cover;
         }
     }
 

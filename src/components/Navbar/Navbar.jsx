@@ -4,8 +4,13 @@ import { Menu, Spain, UnitedKingdom, Sun, Moon } from '../../constants/icons';
 
 const Navbar = () => {
 
-  const [language, setLanguage] = useState('spanish')
-  const [darkMode, setDarkMode] = useState(true)
+  const [language, setLanguage] = useState('spanish');
+  const [darkMode, setDarkMode] = useState(true);
+  const [isCrossed, setIsCrossed] = useState(false);
+
+  const handleClick = () => {
+    setIsCrossed(!isCrossed);
+  };
 
   return (
     <nav className='nav'>
@@ -14,7 +19,10 @@ const Navbar = () => {
         </a>
 
         <div className="nav__menu">
-          <Menu />
+          <div className={`menu-icon ${isCrossed ? 'menu-icon--crossed' : ''}`} onClick={handleClick}>
+            <div className="menu-icon__bar"></div>
+            <div className="menu-icon__bar"></div>
+          </div>
         </div>
 
         <div className='nav__utilities'>

@@ -1,58 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Portfolio.scss';
 
 const Portfolio = () => {
   return (
-    <div>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-        <h2>PRUEBA</h2>
-    </div>
+    <section className='portfolio__container'>
+        Portfolio
+    </section>
   )
 }
 
