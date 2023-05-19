@@ -31,7 +31,7 @@
             .home__keepScrolling{
                 font-family: $rubik;
                 @include centerDivsRow;
-                color: #f5f5f5f5;
+                color: $light-gray;
                 font-size: 20px; 
             }
             .home__timezone{
@@ -43,13 +43,13 @@
                     align-items: flex-end;
 
                         span{
-                            color: #f5f5f5; 
+                            color: $light-gray; 
                             margin: 0 5px 0 0;
                             font-size: 20px;
                             font-weight: 600;
                         }
                         h4{
-                            color: #f5f5f5;
+                            color: $light-gray;
                             margin: 0 5px 0 5px;
                             font-size: 20px
                         }
@@ -72,7 +72,7 @@
             @include centerDivsCol;
 
             h1{
-                color: #f5f5f5;
+                color: $light-gray;
                 font-size: 55px;
                 font-weight: 700;
             }
@@ -81,7 +81,7 @@
                 height: 50px;
                 overflow:hidden;
                 margin-left: 1rem;
-                color: rgb(245, 245, 245, .7);
+                color: $stone-gray;
                 font-size: 28px;
                 display: flex;
                 flex-direction: column;

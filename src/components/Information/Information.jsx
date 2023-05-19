@@ -36,8 +36,8 @@ const Information = () => {
   return (
     <div className='wrapper'>
       <div ref={refSlider} id='information__container' className='information__container'>
-        <Ellipses isRed={true} height={'250px'} width={'400px'} top={'300px'} left={'200px'}/>
-        <Ellipses isRed={false} height={'250px'} width={'400px'} top={'200px'} left={'350px'}/>
+        <Ellipses isRed={true} height={'250px'} width={'400px'} top={'10%'} left={'10%'}/>
+        <Ellipses isRed={false} height={'250px'} width={'400px'} top={'10%'} left={'10%'}/>
         <div className="information__filter" />
 
         <Portfolio />

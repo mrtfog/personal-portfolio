@@ -7,26 +7,25 @@
     z-index: 10;
     width: 100vw;
     height: 100%;
-    @include centerDivsCol;
-    align-items: flex-start;
     
     .portfolio__wrapper{
-        
+        @include centerDivsCol;
         @include containerWidth;
+        align-items: flex-start;    
+        width: 70%;
+        margin: 0 auto 0 auto;
 
         .portfolio__description{
             h2{
-                font-weight: 700;
-                font-size: 2.5rem;
-                color: $light-gray;
-                margin-bottom: .3em;
+                @include sectionTitle;
             }
             p{
-                font-weight: 500;
-                font-size: 1.5rem;
-                color: $stone-gray
-                ;
+                @include sectionParagraph;
             }
+        }
+
+        .portfolio__cards_container{
+            @include centerDivsRow;
         }
     }
 }
