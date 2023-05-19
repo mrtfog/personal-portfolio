@@ -23,7 +23,7 @@ const Home = () => {
     
   }, []);
 
-  useEffect(() => {
+  const laptopAnimation = () => {
     gsap.to('.home__imgContainer', {
       scale: 0.5,
       ease: 'ease',
@@ -35,6 +35,10 @@ const Home = () => {
         pin: true,
       },
     });
+  };
+
+  useEffect(() => {
+    laptopAnimation();
   }, []);
 
   

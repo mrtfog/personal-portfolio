@@ -3,54 +3,45 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { Portfolio, AboutMe } from '../../container';
+import { Ellipses } from '../index';
 import './Information.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Information = () => {
   const refSlider = useRef(null);
-  const tl = gsap.timeline();
-  const p = 'wrapper'
 
   const addAnim = () => {
     const slider = refSlider.current;
-    const totalScroll = slider.scrollWidth - slider.offsetWidth;
+    const totalScrollX = slider.scrollWidth - window.innerWidth;
 
-    tl.add(gsap.to(slider, {
-      x: () => -totalScroll,
-      ease: "none",
+    gsap.to(slider, {
+      x: -totalScrollX,
+      ease: 'none',
       scrollTrigger: {
-        id: p,
         trigger: slider,
         pin: true,
-        scrub: 1,
+        scrub: true,
         markers: true,
-        start: "top top",
-        end: () => "+=" * totalScroll
-      }
-    }))
-
+        start: 'top top',
+        end: () => `+=${totalScrollX}`,
+      },
+    });
   };
 
-  const removeAnim = () => {
-    tl.kill(true);
-  }
-
   useEffect(() => {
-    addAnim();
-    return removeAnim;
+    // addAnim();
   }, []);
 
   return (
     <div className='wrapper'>
-      <div ref={refSlider} id="information__container" className='information__container scrollx'>
-        <div id="component">
-          <Portfolio />
-        </div>
+      <div ref={refSlider} id='information__container' className='information__container'>
+        <Ellipses isRed={true} height={'250px'} width={'400px'} top={'300px'} left={'200px'}/>
+        <Ellipses isRed={false} height={'250px'} width={'400px'} top={'200px'} left={'350px'}/>
+        <div className="information__filter" />
 
-        <div id="component">
-          <AboutMe />
-        </div>
+        <Portfolio />
+        <AboutMe />
       </div>
     </div>
   );

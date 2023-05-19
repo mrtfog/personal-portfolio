@@ -1,7 +1,7 @@
-
+// @import '../../scss/abstracts/variables.scss';
 
 .wrapper{
-    // overflow-x: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -9,9 +9,21 @@
     height: 100vh;
     width: 200vw;
     display: flex;
+    flex-shrink: 2;
+}
+
+.information__filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    backdrop-filter: blur(100px);  
+    -webkit-backdrop-filter: blur(100px);
 }
 
 #component{
     width: 100vw;
-    height: 100vh;
   }
