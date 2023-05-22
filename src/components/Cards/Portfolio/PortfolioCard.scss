@@ -1,0 +1,109 @@
+@import '../../../scss/abstracts/mixins.scss';
+@import '../../../scss/abstracts/variables.scss';
+
+.portfoliocard__container{
+    margin: 20px 10px 0 10px; 
+    border-radius: 10px; 
+    overflow: hidden;
+    background-color: rgba($charcoal-gray, .5);
+    border: 1px solid $dark-gray;
+    font-family: $rubik;
+    
+    .portfoliocard__imageContainer{
+        margin: 0 0 10px 0;
+        .portfoliocard__image{
+            width: 100%;
+    
+            
+            @media only screen and (min-width: 768px) {
+                height: 130px;
+            }
+            @media only screen and (min-width: 992px) {
+                height: 200px;
+            }
+        }
+    }
+
+    .portfoliocard__information{
+
+        .portfoliocard__title{
+            padding-left: 20px;
+            
+            h3{
+                color: $light-gray;
+            }
+
+            h5{
+                font-size: 1rem;
+            }
+            
+            @media only screen and (min-width: 768px) {
+                h5{
+                    display: none;
+                }
+            }
+            
+            @media only screen and (min-width: 992px) {
+                h5{
+                    display: inline-block;
+                }
+            }
+            
+        }
+
+        .portfoliocard__description{
+            margin: 10px 0 20px 0;
+            padding-left: 20px;
+            p{
+                color: $stone-gray;
+            }
+        }
+
+        .portfoliocard__buttons{
+            height: 2.5rem;
+            width: 100%;
+            
+            border-top: 1px solid $dark-gray;
+            @include centerDivsRow;
+            
+            button{
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                font-weight: 600;
+                color: $stone-gray;
+                cursor: pointer;
+                transition: all .1s ease-in;
+
+                &:hover{
+                    color: $light-gray;
+                    background-color: $dark-gray;
+                }
+            }
+
+            button:last-child{
+                border-left: 1px solid $dark-gray;
+            }
+        }
+
+    }
+
+
+}
+
+.portfoliocard__container:first-child .portfoliocard__information{
+    h5{
+        color: $red;
+    }
+}
+
+.portfoliocard__container:nth-child(2) .portfoliocard__information{
+    h5{
+        color: $purple;
+    }
+}
+.portfoliocard__container:last-child .portfoliocard__information{
+    h5{
+        color: $blue;
+    }
+}

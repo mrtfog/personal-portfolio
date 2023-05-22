@@ -1,4 +1,9 @@
+@import '../../scss/abstracts/variables.scss';
+@import '../../scss/abstracts/mixins.scss';
+
 .aboutme__container{
-    background-color: gray;
+    background-color: rgba($midnight-black, .5);
+    z-index: 10;
     width: 100vw;
+    height: 100%;
 }

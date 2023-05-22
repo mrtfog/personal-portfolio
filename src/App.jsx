@@ -1,14 +1,15 @@
 import React from 'react';
-import { Navbar, Information } from './components/index';
+import { Navbar, Information, MouseTracker } from './components/index';
 import { Home } from './container/index';
 import './app.scss';
 
 const App = () => {
+
   return (
     <>
       <Navbar />
       <main>
-        {/* <Home /> */}
+        <Home />
         <Information />
       </main>
     </>

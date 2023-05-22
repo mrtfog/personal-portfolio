@@ -3,19 +3,70 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-ul{
-	list-style-type: none;
 
-}
-li{
-	list-style: none;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
 }
 
-button{
-	border: none;
-	outline: none;
+// Typography
+body {
+  font-family: Arial, sans-serif;
 }
 
-a{
-	text-decoration: none;
+// Lists
+ul,
+ol {
+  list-style: none;
 }
+
+// Links
+a {
+  text-decoration: none;
+}
+
+// Images
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// Forms
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+// Clearfix
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+// Add your own reset styles below this line
+

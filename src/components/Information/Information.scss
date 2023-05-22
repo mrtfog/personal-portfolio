@@ -1,7 +1,7 @@
 // @import '../../scss/abstracts/variables.scss';
 
 .wrapper{
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 }
 
@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     transform: translate(0%, 0%);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 1;
     backdrop-filter: blur(100px);  

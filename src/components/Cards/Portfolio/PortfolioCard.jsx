@@ -1,11 +1,35 @@
-import React from 'react'
+import React from 'react';
+import './PortfolioCard.scss';
 
 const PortfolioCard = ({ data }) => {
   return (
     <div className='portfoliocard__container'>
-      <div className='image__container' style={{margin: '0 10px 0 10px', borderRadius: '10px', overflow: 'hidden'}}>
-        <img src={data.image} alt="" height={'300px'} width='100%'/>
+      <div className='portfoliocard__imageContainer'>
+        <img src={data.image} alt="" className='portfoliocard__image' height={'300px'} width='100%'/>
       </div>
+
+      <div className='portfoliocard__information'>
+        
+        <div className='portfoliocard__title'>
+          <h3>{data.title}</h3>
+          <h5>{data.project_type}</h5>
+        </div>
+        
+        <div className='portfoliocard__description'>
+          <p>{data.project_description}</p>
+        </div>
+
+        <div className='portfoliocard__buttons'>
+          {
+            data.hasDeployment ? (
+              <button>Deployment</button>
+              ) : ('')
+          }
+          <button>More Details</button>
+        </div>
+
+      </div>
+
     </div>
   )
 }
