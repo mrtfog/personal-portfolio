@@ -13,7 +13,8 @@
         margin: 0 0 10px 0;
         .portfoliocard__image{
             width: 100%;
-    
+            mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+            -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
             
             @media only screen and (min-width: 768px) {
                 height: 130px;
@@ -37,11 +38,6 @@
                 font-size: 1rem;
             }
             
-            @media only screen and (min-width: 768px) {
-                h5{
-                    display: none;
-                }
-            }
             
             @media only screen and (min-width: 992px) {
                 h5{
@@ -49,6 +45,11 @@
                 }
             }
             
+            @media only screen and (min-width: 768px) {
+                h5{
+                    display: none;
+                }
+            }
         }
 
         .portfoliocard__description{
@@ -79,10 +80,6 @@
                     color: $light-gray;
                     background-color: $dark-gray;
                 }
-            }
-
-            button:last-child{
-                border-left: 1px solid $dark-gray;
             }
         }
 

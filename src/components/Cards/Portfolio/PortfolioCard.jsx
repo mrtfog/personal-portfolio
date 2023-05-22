@@ -5,7 +5,7 @@ const PortfolioCard = ({ data }) => {
   return (
     <div className='portfoliocard__container'>
       <div className='portfoliocard__imageContainer'>
-        <img src={data.image} alt="" className='portfoliocard__image' height={'300px'} width='100%'/>
+        <img src={data.image} alt="" className='portfoliocard__image'/>
       </div>
 
       <div className='portfoliocard__information'>
@@ -25,7 +25,7 @@ const PortfolioCard = ({ data }) => {
               <button>Deployment</button>
               ) : ('')
           }
-          <button>More Details</button>
+          <button style={ data.hasDeployment ? { borderLeft: '1px solid rgba(58,59,60,1)'} : {}}>More Details</button>
         </div>
 
       </div>
