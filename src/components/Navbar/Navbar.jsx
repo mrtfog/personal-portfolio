@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { PersonalLogo, Spain, UnitedKingdom } from '../../constants/icons';
-import { ScrollLink } from '../index';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -15,9 +14,9 @@ const Navbar = () => {
 
   return (
     <nav className='nav'>
-        <ScrollLink to="#">
+        <a href='#home'>
           <img src={ PersonalLogo } alt="" className='nav_logo'/>
-        </ScrollLink>
+        </a>
 
         <div className="nav__menu">
           <div className={`menu-icon ${isCrossed ? 'menu-icon--crossed' : ''}`} onClick={handleClick}>

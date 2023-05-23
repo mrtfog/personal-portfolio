@@ -2,8 +2,39 @@
 @import '../../scss/abstracts/mixins.scss';
 
 .aboutme__container{
-    background-color: rgba($midnight-black, .5);
     z-index: 10;
     width: 100vw;
     height: 100%;
+    @include centerDivsCol;
+    background-color: rgba($midnight-black, .4);
+
+    .aboutme__wrapper{
+        @include centerDivsCol;
+        @include containerWidth;
+        align-items: flex-start;    
+        width: 70%;
+        margin: auto;
+        .aboutme__description{
+            h2{
+                @include sectionTitle;
+            }
+            p{
+                @include sectionParagraph;
+            }
+        }
+
+        .aboutme__cards_container{
+            width: 100%;
+            @include centerDivsRow;
+            #aboutme__info_container{
+                margin: 20px 10px 0 10px; 
+                background-color: rgba($charcoal-gray, .5);
+                border: 1px solid $dark-gray;
+                border-radius: 10px; 
+                font-family: $rubik;
+                height: 480px;
+                width: 100%;
+            }
+        }
+    }
 }

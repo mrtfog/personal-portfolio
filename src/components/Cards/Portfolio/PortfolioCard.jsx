@@ -25,7 +25,8 @@ const PortfolioCard = ({ data }) => {
               <button>Deployment</button>
               ) : ('')
           }
-          <button style={ data.hasDeployment ? { borderLeft: '1px solid rgba(58,59,60,1)'} : {}}>More Details</button>
+          <button style={ data.hasDeployment ? { borderLeft: '1px solid rgba(58,59,60,1)'} : {}}
+          >More Details</button>
         </div>
 
       </div>
