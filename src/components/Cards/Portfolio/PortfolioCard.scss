@@ -16,13 +16,13 @@
             mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
             -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
             
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 992px) {
                 height: 130px;
             }
-            @media only screen and (min-width: 992px) {
+            @media only screen and (min-width: 1200px) {
                 height: 200px;
             }
-            @media only screen and (min-width: 1200px) {
+            @media only screen and (min-width: 1450px) {
                 height: 250px;
             }
         }
@@ -38,19 +38,21 @@
                 color: $light-gray;
             }
             
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 992px) {
                 h5{
                     display: none;
                 }
             }
-            @media only screen and (min-width: 992px) {
+            @media only screen and (min-width: 1200px) {
+                h3{
+                    font-size: 1.2rem;
+                }
                 h5{
-                    display: inline-block;
-                    font-size: 1rem;
+                    display: none;
                 }
             }
 
-            @media only screen and (min-width: 1200px) {
+            @media only screen and (min-width: 1450px) {
 
                 h3{
                     font-size: 1.4rem;
@@ -70,11 +72,11 @@
                 color: $stone-gray;
             }
 
-            @media only screen and (min-width: 992px) {
+            @media only screen and (min-width: 1200px) {
                 font-size: 1rem;
             }
 
-            @media only screen and (min-width: 1200px) {
+            @media only screen and (min-width: 1450px) {
                 font-size: 1.1rem;
             }
         }

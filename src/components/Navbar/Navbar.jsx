@@ -19,10 +19,18 @@ const Navbar = () => {
         </a>
 
         <div className="nav__menu">
+          <div class="menu-icon">
+            <input class="menu-icon__cheeckbox" type="checkbox" />
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          {/*           
           <div className={`menu-icon ${isCrossed ? 'menu-icon--crossed' : ''}`} onClick={handleClick}>
             <div className="menu-icon__bar"></div>
             <div className="menu-icon__bar"></div>
-          </div>
+          </div> */}
         </div>
 
         <div className='nav__utilities'>

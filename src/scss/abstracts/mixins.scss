@@ -25,15 +25,15 @@
     margin-bottom: .3em;
 
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 992px) {
         font-size: 1.2rem;
     }
     
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1200px) {
         font-size: 1.5rem;
     }
 
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1450px) {
         font-size: 2rem;
     }
 
@@ -43,27 +43,33 @@
     font-weight: 500;
     color: $stone-gray;
 
-    @media only screen and (min-width: 768px) {
-        font-size: 1.2rem;
+    @media only screen and (min-width: 992px) {
+        font-size: 1rem;
     }
     
-    @media only screen and (min-width: 992px) {
-        font-size: 1.3rem;
+    @media only screen and (min-width: 1200px) {
+        font-size: 1.2rem;
     }
 
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1450px) {
         font-size: 1.4rem;
     }
 }
 
-// / Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {}
 
-@media only screen and (max-width: 600px) {}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-/* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {}
-/* Large devices (laptops/desktops, 992px and up) */
+
+/* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+/* Extra large devices (wide screens, 1400px and up) */
+@media only screen and (min-width: 1450px) {}

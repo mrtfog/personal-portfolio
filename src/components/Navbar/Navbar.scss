@@ -60,6 +60,9 @@ $bar-spacing: 10px;
 $bar-color: #fff;
 $bar-crossed-rotate: 45deg;
 
+$menu-icon-transition-duration: 0.2s;
+$menu-icon-animation-duration: 0.4s;
+
 .menu-icon {
   display: flex;
   flex-direction: column;
@@ -72,32 +75,165 @@ $bar-crossed-rotate: 45deg;
     width: $bar-width;
     height: $bar-height;
     background-color: $bar-color;
-    transition: all .2s ease-in-out;
+    transition: all $menu-icon-transition-duration ease-in-out;
     border-radius: 5px;
-
 
     &:not(:last-child) {
       margin-bottom: $bar-spacing;
     }
-
   }
 
   &--crossed {
     .menu-icon__bar {
-        transition: all .2s ease-in-out;
+      transition: all $menu-icon-transition-duration ease-in-out;
 
-        &:first-child {
-        transform: rotate($bar-crossed-rotate) translate(9.5px);
-        }
+      &:first-child {
+        transform-origin: center center;
+        animation: icon-merge $menu-icon-animation-duration ease-in-out forwards, icon-crossed-first $menu-icon-animation-duration ease-in-out $menu-icon-animation-duration forwards;
+      }
 
-        &:last-child {
-        transform: rotate(-$bar-crossed-rotate) translate(9.5px);
-        }
+      &:last-child {
+        opacity: 0;
+        transform-origin: center center;
+        animation: icon-merge $menu-icon-animation-duration ease-in-out forwards, icon-crossed-last $menu-icon-animation-duration ease-in-out $menu-icon-animation-duration forwards;
+      }
     }
   }
 
-  
   &:hover .menu-icon__bar {
     background-color: $light-gray;
   }
+}
+
+@keyframes icon-merge {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes icon-crossed-first {
+  0% {
+    transform: rotate(0) translate(0);
+  }
+  100% {
+    transform: rotate($bar-crossed-rotate) translate(9.5px);
+  }
+}
+
+@keyframes icon-crossed-last {
+  0% {
+    opacity: 0;
+    transform: rotate(0) translate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-$bar-crossed-rotate) translate(9.5px);
+  }
+}
+
+
+.demo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(
+		to top,
+		#dad4ec 0%,
+		#dad4ec 1%,
+		#f3e7e9 100%
+	);
+	// 	for demo
+	.menu-icon {
+		transform: scale(1.5);
+	}
+}
+
+:root {
+	--bar-bg: #212529;
+}
+
+.menu-icon {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+
+	.menu-icon__cheeckbox {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		cursor: pointer;
+		z-index: 2;
+		-webkit-touch-callout: none;
+		position: absolute;
+		opacity: 0;
+	}
+	div {
+		margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 40px;
+		height: 15px;
+	}
+	span {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 3px;
+		background-color: $light-gray;
+		border-radius: 1px;
+		transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+
+		&:first-of-type {
+			top: 0;
+		}
+		&:last-of-type {
+			bottom: 0;
+		}
+	}
+	&.active,
+	.menu-icon__cheeckbox:checked + div {
+		span {
+			&:first-of-type {
+				transform: rotate(45deg);
+				top: 6px;
+			}
+			&:last-of-type {
+				transform: rotate(-45deg);
+				bottom: 6px;
+			}
+		}
+	}
+
+	&.active:hover span:first-of-type,
+	&.active:hover span:last-of-type,
+	&:hover .menu-icon__cheeckbox:checked + div span:first-of-type,
+	&:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
+		width: 35px;
+	}
+
+	&:hover {
+		// no need hover effect on mobile.
+		@media (min-width: 1024px) {
+			span:first-of-type {
+				width: 30px;
+			}
+
+			span:last-of-type {
+				width: 15px;
+			}
+		}
+	}
 }
