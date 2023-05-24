@@ -1,0 +1,10 @@
+@import '../../scss/abstracts/variables.scss';
+@import '../../scss/abstracts/mixins.scss';
+
+.contact__container{
+    z-index: 10;
+    width: 100vw;
+    height: 100%;
+    @include centerDivsCol;
+    background-color: rgba($midnight-black, .4);
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Information } from './components/index';
-import { Home } from './container/index';
+import { Home, Contact } from './container/index';
 import './app.scss';
 
 const App = () => {
@@ -9,8 +9,9 @@ const App = () => {
     <>
       <Navbar />
       <main>
-        {/* <Home /> */}
+        <Home />
         <Information />
+        <Contact />
       </main>
     </>
   )

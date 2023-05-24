@@ -17,16 +17,15 @@
 
         .home__information{
             position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
+            top: 85%;
+            left: 50%;
+            width: 1024px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             
             z-index: 20;
-            width: 1024px;
-            transform: translate(-40%, -200%);
+            transform: translate(-50%, -50%);
 
             .home__keepScrolling{
                 font-family: $rubik;
