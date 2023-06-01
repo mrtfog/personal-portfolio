@@ -29,7 +29,7 @@ const Information = () => {
   };
 
   useEffect(() => {
-    addAnim();
+    // addAnim();
   }, []);
 
   return (
