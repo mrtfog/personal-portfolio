@@ -29,7 +29,7 @@ const Information = () => {
   };
 
   useEffect(() => {
-    // addAnim();
+    addAnim();
   }, []);
 
   return (
@@ -39,14 +39,14 @@ const Information = () => {
           <div className="information__filter" />
 
           <Portfolio />
-          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'20%'} left={'5%'}/>
-          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'80%'} left={'37%'}/>
+          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'30%'} left={'10%'}/>
+          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'89%'} left={'43%'}/>
           <AboutMe />
-          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'20%'} left={'55%'}/>
-          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'15%'} left={'60%'}/>
+          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'30%'} left={'60%'}/>
+          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'35%'} left={'65%'}/>
 
-          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'40%'} left={'90%'}/>
-          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'50%'} left={'85%'}/>
+          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'65%'} left={'95%'}/>
+          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'75%'} left={'90%'}/>
         </div>
       </div>
     </>

@@ -2,11 +2,17 @@
 
 export const jobs = [
     {
-        title: '',
-        period: '',
-        company: '',
-        job_description: ''
-    }, 
+        title: 'Custommer Technical Support',
+        period: 'March 2021 - July 2022',
+        company: 'Airtech SA',
+        job_description: 'This was my first job using programming technologies. Everyday, I used to work making SQL Server database queries and changes.'
+    },
+    {
+        title: 'Front End Developer',
+        period: 'January  2023 - Present',
+        company: 'Airtech SA',
+        job_description: 'My work consists of develop user interfaces with React, establish communication with differents APIs, and styling an internet site with Tailwind CSS & SCSS.'
+    },
 ]
 export const projects = [
     {

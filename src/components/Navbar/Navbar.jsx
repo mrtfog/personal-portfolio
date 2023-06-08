@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 
-import { PersonalLogo, Spain, UnitedKingdom } from '../../constants/icons';
+import { PersonalLogo, Spain, UnitedKingdom, ArrowDown } from '../../constants/icons';
 import './Navbar.scss';
 
 const Navbar = () => {
 
   const [language, setLanguage] = useState('spanish');
-  const [isCrossed, setIsCrossed] = useState(false);
-
-  const handleClick = () => {
-    setIsCrossed(!isCrossed);
-  };
 
   return (
     <nav className='nav'>
@@ -30,10 +25,18 @@ const Navbar = () => {
 
         <div className='nav__utilities'>
           {
-            language === 'spanish' ?
-            <img onClick={() => setLanguage('english')} src={Spain} alt="Spanish" />
-            :
-            <img onClick={() => setLanguage('spanish')} src={UnitedKingdom} alt="English" />
+            language === 'spanish' ?(
+              <div className='nav__language' onClick={() => setLanguage('english')}>
+                <img src={Spain} alt="Spanish" />
+                <ArrowDown />
+              </div>
+            )
+            :(
+              <div className='nav__language' onClick={() => setLanguage('spanish')}>
+                <img src={UnitedKingdom} alt="English" />
+                <ArrowDown />
+              </div>
+            )
           }
         </div>
     </nav>

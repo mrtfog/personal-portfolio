@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    // laptopAnimation();
+    laptopAnimation();
   }, []);
 
   
