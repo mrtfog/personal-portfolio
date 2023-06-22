@@ -9,8 +9,9 @@
 
     .home__content{
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 10;
         width: 100vw;
         height: 100vh;
@@ -19,7 +20,6 @@
             position: absolute;
             top: 85%;
             left: 50%;
-            width: 1024px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -31,7 +31,14 @@
                 font-family: $rubik;
                 @include centerDivsRow;
                 color: $light-gray;
-                font-size: 20px; 
+                
+                @media only screen and (min-width: 1200px) {
+                    font-size: 18px; 
+                }
+                @media only screen and (min-width: 1450px) {
+                    font-size: 20px; 
+                }
+
             }
             .home__timezone{
                 @include centerDivsRow;
@@ -50,7 +57,14 @@
                         h4{
                             color: $light-gray;
                             margin: 0 5px 0 5px;
-                            font-size: 20px
+                            
+                            @media only screen and (min-width: 1200px) {
+                                font-size: 18px; 
+                            }
+                            @media only screen and (min-width: 1450px) { 
+                                font-size: 20px;
+                            }
+
                         }
     
                     }
@@ -60,7 +74,14 @@
                     }
                 }
                 
-                
+                @media only screen and (min-width: 1200px) {
+                    width: 768px;
+                }
+
+                @media only screen and (min-width: 1450px) { 
+                    width: 1024px;
+                }
+
 
             }
         }
@@ -72,8 +93,16 @@
 
             h1{
                 color: $light-gray;
-                font-size: 55px;
                 font-weight: 700;
+                
+                @media only screen and (min-width: 1200px) {
+                    font-size: 42px;
+                }
+                @media only screen and (min-width: 1450px) { 
+                    font-size: 55px;
+                }
+
+
             }
             .home__list{
                 font-family: $rubik;
@@ -81,21 +110,31 @@
                 overflow:hidden;
                 margin-left: 1rem;
                 color: $stone-gray;
-                font-size: 28px;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: center; 
 
                 & > div > div {
                     padding: 0 0.75rem;
                     height:2.81rem;
                     margin-bottom: 2.81rem;
                     display:inline-block;
+
                   }
 
                 & div:first-child {
                     animation: text-animation 8s infinite;
                 }
+
+                @media only screen and (min-width: 1200px) {
+                    font-size: 22px;
+                }
+
+                @media only screen and (min-width: 1450px) { 
+                    font-size: 28px;
+                }
+
+
             }
         }
    
@@ -103,7 +142,9 @@
 
     .home__imgContainer{
         position: absolute;
-        top:0;
+        top: 0%;
+        left: 0%;
+        transform: translate(-50%, -50%);
         height: 200vh;
         width: 200vw;
         z-index: 20;
@@ -114,17 +155,20 @@
             width: 100%;
             object-fit: cover;
         }
+        
     }
 
     .home__filter{
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100vw;
         height: 100vh;
         z-index: 1;
         background-color: rgba(0, 0, 0, .3);
         backdrop-filter: blur(100px);  
+
     }
 
     .home__gradient{

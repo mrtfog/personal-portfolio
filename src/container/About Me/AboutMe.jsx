@@ -1,10 +1,71 @@
 import React from 'react';
-import { jobs } from '../../constants/resources';
+import { jobs, techSkills } from '../../constants/resources';
 import './AboutMe.scss';
 
+
+
 const AboutMe = () => {
+  
+  
+  const RenderCards = ({techSkills}) => {  
+    return(
+      <>
+
+      <div className='aboutme__stack_container'>
+        <h3>Front end</h3>
+        <div>
+          {
+            techSkills.front_end.map( (tech, techIdx) => (
+              <div className='aboutme__icon' title={tech.title} key={techIdx}>
+
+                <a  href={tech.website} target='_blank'>
+                  <img src={tech.icon} alt="" />
+                </a>
+
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div className='aboutme__stack_container'>
+        <h3>Back end</h3>
+        <div>
+          {
+            techSkills.back_end.map( (tech, techIdx) => (
+              <div className='aboutme__icon' title={tech.title} key={techIdx}>
+
+                <a  href={tech.website} target='_blank'>
+                  <img src={tech.icon} alt="" />
+                </a>
+
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div className='aboutme__stack_container'>
+        <h3>Other Tools</h3>
+        <div>
+          {
+            techSkills.other_tools.map( (tech, techIdx) => (
+              <div className='aboutme__icon' title={tech.title} key={techIdx}>
+
+                <a  href={tech.website} target='_blank'>
+                  <img src={tech.icon} alt="" />
+                </a>
+
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      
+      </>
+    )
+  }
+
   return (
-    <section className='aboutme__container'>
+    <section className='aboutme__container' id='AboutMe'>
       <div className='aboutme__wrapper'>
 
         <div className='aboutme__description'>
@@ -37,8 +98,11 @@ const AboutMe = () => {
               )
             })}
           </div>
-          <div className='aboute__skills_container' id='aboutme__info_container'>
+
+          <div className='aboutme__skills_container' id='aboutme__info_container'>
             
+            <RenderCards techSkills={techSkills} />
+ 
           </div>
           
         </div>
@@ -46,6 +110,10 @@ const AboutMe = () => {
 
     </section>
   )
+
+  
 }
+
+
 
 export default AboutMe

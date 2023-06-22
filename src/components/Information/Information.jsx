@@ -29,7 +29,15 @@ const Information = () => {
   };
 
   useEffect(() => {
-    addAnim();
+    const handleLoad = () => {
+      addAnim();
+    };
+
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
   return (
@@ -45,8 +53,8 @@ const Information = () => {
           <Ellipses isRed={true} height={'250px'} width={'400px'} top={'30%'} left={'60%'}/>
           <Ellipses isRed={false} height={'250px'} width={'400px'} top={'35%'} left={'65%'}/>
 
-          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'65%'} left={'95%'}/>
-          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'75%'} left={'90%'}/>
+          <Ellipses isRed={false} height={'200px'} width={'400px'} top={'45%'} left={'95%'}/>
+          <Ellipses isRed={true} height={'200px'} width={'400px'} top={'55%'} left={'90%'}/>
         </div>
       </div>
     </>

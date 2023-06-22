@@ -6,7 +6,7 @@ import './Contact.scss';
 const Contact = () => {
   return (
     <>
-      <section className='contact__container'>
+      <section className='contact__container' id='ContactMe'>
         <div className='contact__filter'/>
         <div className='contact__content'>
           <div className='contact__title'>

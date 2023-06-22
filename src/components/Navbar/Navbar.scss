@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(0,0,0, .2 ), rgba(0,0,0,0) );
+    background-image: linear-gradient(to bottom, rgba(0,0,0, .5 ), rgba(0,0,0,0) );
     
     .nav_logo{
         display: inline-block;
@@ -21,16 +21,70 @@
 }
 
 .nav__menu{
-    svg{
-        height: 50px;
-        width: 50px;
-        cursor: pointer;
-        color: #f5f5f5;
+  position: relative;
+  .nav__list{
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: max-content;
+    padding: 3rem;
+    @include centerDivsCol;
+    transition: all .3s ease-in-out;
+    
+    background-color: rgba($midnight-black, .9);
+    border: 1px solid rgba($dark-gray, .9);
+    border-radius: 12px;
+    ul{
+      text-align: center;
+      li{
+        position: relative;
+        color: $stone-gray;
+        margin: 0 .5em .5em .5em;
+        padding: .5em;
+        
+        &:first-child{
+          margin-top: 4em;
+        }
+
+        span{
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+        
+        transition: all .2s ease-in-out;
 
         &:hover{
-            color: #B30037;
+          color: $light-gray;
+          cursor: pointer;
+          &::before{
+            content: '';
+            height: 6px;
+            width: 6px;
+            position: absolute;
+            background-color: $red;
+            left: 50%;
+            border-radius: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0%);
+
+          }
         }
+      }
     }
+  }
+
+  .nav__list.invisible{
+    opacity: 0%;
+    visibility: hidden;
+    transform: translate(-50%, 20px); 
+  }
+
+  .nav__list.visible{
+    opacity: 100%;
+    visibility: visible;
+    transform: translate(-50%, 0); 
+  }
 }
 
 .nav__utilities{
@@ -69,107 +123,12 @@ $menu-icon-transition-duration: 0.2s;
 $menu-icon-animation-duration: 0.4s;
 
 .menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  &__bar {
-    position: relative;
-    width: $bar-width;
-    height: $bar-height;
-    background-color: $bar-color;
-    transition: all $menu-icon-transition-duration ease-in-out;
-    border-radius: 5px;
-
-    &:not(:last-child) {
-      margin-bottom: $bar-spacing;
-    }
-  }
-
-  &--crossed {
-    .menu-icon__bar {
-      transition: all $menu-icon-transition-duration ease-in-out;
-
-      &:first-child {
-        transform-origin: center center;
-        animation: icon-merge $menu-icon-animation-duration ease-in-out forwards, icon-crossed-first $menu-icon-animation-duration ease-in-out $menu-icon-animation-duration forwards;
-      }
-
-      &:last-child {
-        opacity: 0;
-        transform-origin: center center;
-        animation: icon-merge $menu-icon-animation-duration ease-in-out forwards, icon-crossed-last $menu-icon-animation-duration ease-in-out $menu-icon-animation-duration forwards;
-      }
-    }
-  }
-
-  &:hover .menu-icon__bar {
-    background-color: $light-gray;
-  }
-}
-
-@keyframes icon-merge {
-  0% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-@keyframes icon-crossed-first {
-  0% {
-    transform: rotate(0) translate(0);
-  }
-  100% {
-    transform: rotate($bar-crossed-rotate) translate(9.5px);
-  }
-}
-
-@keyframes icon-crossed-last {
-  0% {
-    opacity: 0;
-    transform: rotate(0) translate(0);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(-$bar-crossed-rotate) translate(9.5px);
-  }
-}
-
-
-.demo {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100vw;
-	height: 100vh;
-	background-image: linear-gradient(
-		to top,
-		#dad4ec 0%,
-		#dad4ec 1%,
-		#f3e7e9 100%
-	);
-	// 	for demo
-	.menu-icon {
-		transform: scale(1.5);
-	}
-}
-
-:root {
-	--bar-bg: #212529;
-}
-
-.menu-icon {
 	position: relative;
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
+  z-index: 51;
+
 
 	.menu-icon__cheeckbox {
 		display: block;
@@ -226,7 +185,7 @@ $menu-icon-animation-duration: 0.4s;
 	&.active:hover span:last-of-type,
 	&:hover .menu-icon__cheeckbox:checked + div span:first-of-type,
 	&:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
-		width: 35px;
+		width: 40px;
 	}
 
 	&:hover {

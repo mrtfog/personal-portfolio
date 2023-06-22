@@ -46,7 +46,7 @@
                         font-size: 16px;
                         color: $red;
                         font-family: $rubik;
-                        font-weight: 700;
+                        font-weight: 500;
                     }
                     &:not(:nth-child(1)){
                         margin-top: 1rem;
@@ -89,5 +89,53 @@
     
     @media only screen and (min-width: 1450px) {
         height: 480px;
+    }
+}
+
+.aboutme__skills_container{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    justify-content: start;
+
+    .aboutme__stack_container{
+        @include centerDivsCol;
+        align-items: start;
+        &:not(:nth-child(1)){
+            margin-top: 20px;
+        }
+
+        h3{
+            color: rgba($light-gray, 1);
+        }
+
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            align-content: start;
+            justify-content: start;
+
+            .aboutme__icon{
+                height: fit-content;
+                margin: .4rem;
+                padding: .5rem;
+                background: rgba($dark-gray, .8);
+                border-radius: 50%;
+                border: 1px solid rgba($stone-gray, .5);
+                
+        
+                a{
+                    
+                    img{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
     }
 }

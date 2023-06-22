@@ -38,52 +38,63 @@ const Home = () => {
   };
 
   useEffect(() => {
-    laptopAnimation();
+    const handleLoad = () => {
+      laptopAnimation();
+    }
+
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
   
   return (
-    <div className='home__container' id='home'>
-      <div className='home__content' >
-        <div className='home__title'>
-          <h1>MARTÍN FOGLIACCO</h1>
-          <div className="home__list">
-            <div><div>Full Stack Developer</div></div>
-            <div><div>UX / UI Designer</div></div>
+    <>
+      <div id='Home'/>
+      <section className='home__container'>
+        <div className='home__content' >
+          <div className='home__title'>
+            <h1>MARTÍN FOGLIACCO</h1>
+            <div className="home__list">
+              <div><div>Full Stack Developer</div></div>
+              <div><div>UX / UI Designer</div></div>
+            </div>
           </div>
-        </div>
-        <div className="home__information">
-          <div className='home__keepScrolling'>
-            <UseAnimations animation={arrowDown} size={60} strokeColor='#f5f5f5' />
-            <h4>Keep <br/> Scrolling </h4>
-          </div>
-
-          <div className="home__timezone">
-
-            <div>
-              <h4>My Timezone</h4>
-              <span>{hour.slice(0, 5)}</span>
+          <div className="home__information">
+            <div className='home__keepScrolling'>
+              <UseAnimations animation={arrowDown} size={60} strokeColor='#f5f5f5' />
+              <h4>Keep <br/> Scrolling </h4>
             </div>
 
-            <img src={Argentina} alt="" />
+            <div className="home__timezone">
+
+              <div>
+                <h4>My Timezone</h4>
+                <span>{hour.slice(0, 5)}</span>
+              </div>
+
+              <img src={Argentina} alt="" />
+            </div>
+
           </div>
-
         </div>
-      </div>
 
-      <div className="home__filter" />
+        <div className="home__filter" />
 
-      <div className='home__gradient'>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+        <div className='home__gradient'>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
 
-      <div className="home__imgContainer">
-        <img src={Laptop} alt="" className='home__screenSection' />
-      </div>
-    </div>
+        <div className="home__imgContainer">
+          <img src={Laptop} alt="" className='home__screenSection' />
+        </div>
+      </section>
+    </>
   )
 }
 
