@@ -47,7 +47,7 @@ const Information = () => {
           <div className="information__filter" />
 
           <Portfolio />
-          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'30%'} left={'10%'}/>
+          <Ellipses isRed={true} height={'220px'} width={'350px'} top={'40%'} left={'10%'}/>
           <Ellipses isRed={false} height={'250px'} width={'400px'} top={'89%'} left={'43%'}/>
           <AboutMe />
           <Ellipses isRed={true} height={'250px'} width={'400px'} top={'30%'} left={'60%'}/>

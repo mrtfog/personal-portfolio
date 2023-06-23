@@ -22,8 +22,8 @@ const Contact = () => {
 
 
         <div className='contact_ellipses'>
-          <Ellipses isRed={false} height={'400px'} width={'400px'} top={'50%'} left={'40%'}/>
-          <Ellipses isRed={true} height={'400px'} width={'400px'} top={'50%'} left={'60%'}/>
+          <Ellipses isRed={false} height={'250px'} width={'400px'} top={'50%'} left={'40%'}/>
+          <Ellipses isRed={true} height={'250px'} width={'400px'} top={'50%'} left={'60%'}/>
         </div>
       </section>
 
