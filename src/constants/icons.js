@@ -19,6 +19,10 @@ import PostgreSQL from '../assets/techs-svg/postgresql.svg';
 import MongoDB from '../assets/techs-svg/mongodb-icon.svg';
 import Figma from '../assets/techs-svg/figma.svg';
 import SocketIO from '../assets/techs-svg/socket-io.svg';
+import Spline from '../assets/techs-svg/spline.png';
+import Sanity from '../assets/techs-svg/sanity.svg';
+import Gsap from '../assets/techs-svg/gsap.svg';
+import FramerMotion from '../assets/techs-svg/framer-motion.svg';
 
 import { RiArrowDownSFill as ArrowDown } from "react-icons/ri";
 
@@ -43,5 +47,9 @@ export {
     PostgreSQL,
     MongoDB,
     SocketIO,
-    Figma
+    Figma,
+    Spline,
+    Sanity,
+    Gsap,
+    FramerMotion
 }

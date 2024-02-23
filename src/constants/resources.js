@@ -1,4 +1,21 @@
-import { HTML5, CSS3, SASS, Tailwind, JavaScript, React, ReactNative, Redux, Next, Node, Express, PostgreSQL, MongoDB, SocketIO, Figma} from './icons';
+import { 
+    HTML5, 
+    CSS3, 
+    SASS, 
+    Tailwind, 
+    JavaScript, 
+    React, 
+    Redux, 
+    Node, 
+    Express, 
+    PostgreSQL, 
+    MongoDB, 
+    Spline, 
+    Figma,
+    Sanity,
+    Gsap,
+    FramerMotion
+} from './icons';
 
 export const techSkills = {
     front_end:[
@@ -37,16 +54,6 @@ export const techSkills = {
             website: 'https://redux.js.org/',
             icon: Redux,
         },
-        {
-            title: 'React Native',
-            website: 'https://reactnative.dev/',
-            icon: ReactNative,
-        },
-        {
-            title: 'Next',
-            website: 'https://nextjs.org/',
-            icon: Next,
-        },
     ],
     back_end: [
         {
@@ -58,11 +65,6 @@ export const techSkills = {
             title: 'Express',
             website: 'https://expressjs.com/es/',
             icon: Express,
-        },
-        {
-            title: 'Socket.IO',
-            website: 'https://socket.io/',
-            icon: SocketIO,
         },
         {
             title: 'PostgreSQL',
@@ -81,6 +83,26 @@ export const techSkills = {
             website: 'https://www.figma.com/',
             icon: Figma,
         },
+        {
+            title: 'Spline',
+            website: 'https://spline.design/',
+            icon: Spline,
+        },
+        {
+            title: 'Sanity',
+            website: 'https://www.sanity.io/',
+            icon: Sanity,
+        },
+        {
+            title: 'GSAP',
+            website: 'https://gsap.com/',
+            icon: Gsap,
+        },
+        {
+            title: 'Framer Motion',
+            website: 'https://www.framer.com/motion/',
+            icon: FramerMotion,
+        },
     ],
 }
 
@@ -93,8 +115,14 @@ export const jobs = [
     },
     {
         title: 'Front End Developer',
-        period: 'January  2023 - Present',
+        period: 'January  2023 - September 2023',
         company: 'Airtech SA',
+        job_description: 'My work consists of develop user interfaces with React, establish communication with differents APIs, and styling an internet site with Tailwind CSS & SCSS.'
+    },
+    {
+        title: 'Full Stack Developer & UX/UI Designer',
+        period: 'September 2023 - Present',
+        company: 'PED',
         job_description: 'My work consists of develop user interfaces with React, establish communication with differents APIs, and styling an internet site with Tailwind CSS & SCSS.'
     },
 ]
