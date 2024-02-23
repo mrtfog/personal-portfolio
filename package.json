@@ -9,20 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gsap": "^3.11.5",
-    "i18next": "^23.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^13.0.1",
-    "react-icons": "^4.8.0",
-    "react-scroll": "^1.8.9",
-    "react-useanimations": "^2.10.0",
-    "sass": "^1.58.3"
+    "gsap": "3.11.5",
+    "i18next": "23.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "13.0.1",
+    "react-icons": "4.8.0",
+    "react-scroll": "1.8.9",
+    "react-useanimations": "2.10.0",
+    "sass": "1.58.3"
   },
   "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.1.0"
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "@vitejs/plugin-react": "3.1.0",
+    "vite": "4.1.0"
   }
 }
