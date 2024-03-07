@@ -1,25 +1,28 @@
-import i18n from 'i18next';
-import {initReactI18next} from 'react-i18next'; 
-import RNLanguageDetector from '@os-team/i18next-react-native-language-detector';
-import ES from './translation-es'; 
-import EN from './translation-en';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-i18n.use(RNLanguageDetector).use(initReactI18next);
-if (!i18n.isInitialized) {
+import ES from "./translation-es";
+import EN from "./translation-en";
 
-    i18n.init({
-    compatibilityзSON: 'v3',
-    resources: {
-        es: {translation: ES},
-        en: {translation: EN},
-    }, 
-    fallbackLng: 'es',
-    lng: 'es',
-    debug: true,
-    interpolation: {
-        escapeValue: false,
-    },
-});
-}
+i18n.use(LanguageDetector)
+    .use(initReactI18next)
+    .init({
+        compatibilityзSON: "v3",
+        resources: {
+            es: { translation: ES },
+            en: { translation: EN },
+        },
+        fallbackLng: "en",
+        lng: "en",
+        debug: true,
+        interpolation: {
+            escapeValue: false,
+        },
+        react: {
+            bindI18n: "languageChanged",
+            useSuspense: true,
+        },
+    });
 
 export default i18n;
