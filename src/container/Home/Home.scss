@@ -1,13 +1,13 @@
-@import '../../scss/abstracts/mixins.scss';
-@import '../../scss/abstracts/variables.scss';
+@import "../../scss/abstracts/mixins.scss";
+@import "../../scss/abstracts/variables.scss";
 
-.home__container{
+.home__container {
     height: 100vh;
     max-width: 100vw;
     overflow: hidden;
     position: relative;
 
-    .home__content{
+    .home__content {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -16,222 +16,206 @@
         width: 100vw;
         height: 100vh;
 
-        .home__information{
+        .home__information {
             position: absolute;
             top: 85%;
             left: 50%;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            
+
             z-index: 20;
             transform: translate(-50%, -50%);
 
-            .home__keepScrolling{
+            .home__keepScrolling {
                 font-family: $rubik;
                 @include centerDivsRow;
                 color: $light-gray;
-                
-                @media only screen and (min-width: 1200px) {
-                    font-size: 18px; 
-                }
-                @media only screen and (min-width: 1450px) {
-                    font-size: 20px; 
-                }
+                width: min-content;
 
+                span {
+                    color: $light-gray;
+                    font-weight: 600;
+
+                    @media only screen and (min-width: 1200px) {
+                        font-size: 18px;
+                    }
+                    @media only screen and (min-width: 1450px) {
+                        font-size: 20px;
+                    }
+                }
             }
-            .home__timezone{
+
+            .home__timezone {
                 @include centerDivsRow;
-                
-                div{
+
+                div {
                     @include centerDivsCol;
                     font-family: $rubik;
                     align-items: flex-end;
 
-                        span{
-                            color: $light-gray; 
-                            margin: 0 5px 0 0;
-                            font-size: 20px;
-                            font-weight: 600;
-                        }
-                        h4{
-                            color: $light-gray;
-                            margin: 0 5px 0 5px;
-                            
-                            @media only screen and (min-width: 1200px) {
-                                font-size: 18px; 
-                            }
-                            @media only screen and (min-width: 1450px) { 
-                                font-size: 20px;
-                            }
-
-                        }
-    
-                    }
-                    img{
+                    span {
+                        color: $light-gray;
                         margin: 0 5px 0 5px;
-                        height: 50px;
+                        font-weight: 600;
+
+                        @media only screen and (min-width: 1200px) {
+                            font-size: 18px;
+                        }
+                        @media only screen and (min-width: 1450px) {
+                            font-size: 20px;
+                        }
                     }
                 }
-                
-                @media only screen and (min-width: 1200px) {
-                    width: 768px;
+                img {
+                    margin: 0 5px 0 5px;
+                    height: 50px;
                 }
+            }
 
-                @media only screen and (min-width: 1450px) { 
-                    width: 1024px;
-                }
+            @media only screen and (min-width: 1200px) {
+                width: 768px;
+            }
 
-
+            @media only screen and (min-width: 1450px) {
+                width: 1024px;
             }
         }
-
-        .home__title{
-            width: 100vw;
-            height: 100vh;
-            @include centerDivsCol;
-
-            h1{
-                color: $light-gray;
-                font-weight: 700;
-                
-                @media only screen and (min-width: 1200px) {
-                    font-size: 42px;
-                }
-                @media only screen and (min-width: 1450px) { 
-                    font-size: 55px;
-                }
-
-
-            }
-            .home__list{
-                font-family: $rubik;
-                height: 50px;
-                overflow:hidden;
-                margin-left: 1rem;
-                color: $stone-gray;
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-
-                & > div > div {
-                    padding: 0 0.75rem;
-                    height:2.81rem;
-                    margin-bottom: 2.81rem;
-                    display:inline-block;
-
-                  }
-
-                & div:first-child {
-                    animation: text-animation 8s infinite;
-                }
-
-                @media only screen and (min-width: 1200px) {
-                    font-size: 22px;
-                }
-
-                @media only screen and (min-width: 1450px) { 
-                    font-size: 28px;
-                }
-
-
-            }
-        }
-   
     }
 
-    .home__imgContainer{
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        transform: translate(-50%, -50%);
-        height: 200vh;
-        width: 200vw;
-        z-index: 20;
-        transform: translate(-25%, -25%);
-
-        .home__screenSection{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-        
-    }
-
-    .home__filter{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .home__title {
         width: 100vw;
         height: 100vh;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, .3);
-        backdrop-filter: blur(100px);  
+        @include centerDivsCol;
 
-    }
+        h1 {
+            color: $light-gray;
+            font-weight: 700;
 
-    .home__gradient{
-        z-index: 0;
-        div{
-            position: absolute;
-            border-radius: 50%;
-            animation: gradient 4s infinite;
-        }
-        @keyframes gradient{
-            70%{
-                transform: scale(1.2) translate(250px);
+            @media only screen and (min-width: 1200px) {
+                font-size: 42px;
+            }
+            @media only screen and (min-width: 1450px) {
+                font-size: 55px;
             }
         }
-    
-        div:nth-child(1)  {
-            height: 90%;
-            width: 80%;
-            background-color: #B30037;
-            left: -20%;
-            top: -10%;
+        .home__list {
+            font-family: $rubik;
+            height: 50px;
+            overflow: hidden;
+            margin-left: 1rem;
+            color: $stone-gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & > div > div {
+                padding: 0 0.75rem;
+                height: 2.81rem;
+                margin-bottom: 2.81rem;
+                display: inline-block;
+            }
+
+            & div:first-child {
+                animation: text-animation 4.5s infinite
+                    cubic-bezier(0.1, 0.82, 0.76, 0.965);
+            }
+
+            @media only screen and (min-width: 1200px) {
+                font-size: 22px;
+            }
+
+            @media only screen and (min-width: 1450px) {
+                font-size: 28px;
+            }
         }
-    
-        div:nth-child(2)  {
-            height: 80%;
-            width: 70%;
-            background-color: #00011F;
-            right: -12%;
-            top: -12%;
-            animation-delay: 2s;
-        }
-    
-        div:nth-child(3)  {
-            height: 65%;
-            width: 80%;
-            background-color: #DD1E0C;
-            right: -20%;
-            bottom: -15%;
-            animation-delay: .3s;
-    
-        }
-        div:nth-child(4)  {
-            height: 50%;
-            width: 75%;
-            background-color: #220150;
-            left: -18%;
-            bottom: -10%;
-            animation-delay: 1.2s;
-    
+    }
+}
+
+.home__imgContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200vh;
+    width: 200vw;
+    z-index: 20;
+
+    .home__screenSection {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.home__filter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(100px);
+}
+
+.home__gradient {
+    z-index: 0;
+    div {
+        position: absolute;
+        border-radius: 50%;
+        animation: gradient 4s infinite;
+    }
+    @keyframes gradient {
+        70% {
+            transform: scale(1.2) translate(250px);
         }
     }
 
-  
-  @keyframes text-animation {
-    0% {margin-top: 0;}
-    10% {margin-top: 0;}
-    20% {margin-top: -5.62rem;}
-    30% {margin-top: -5.62rem;}
-    40% {margin-top: 0;}
-    50% {margin-top: 0;}
-    70% {margin-top: -5.62rem;}
-    80% {margin-top: -5.62rem;}
-    90% {margin-top: 0;}
-    100% {margin-top: 0;}
-  }
-  
+    div:nth-child(1) {
+        height: 90%;
+        width: 80%;
+        background-color: #b30037;
+        left: -20%;
+        top: -10%;
+    }
+
+    div:nth-child(2) {
+        height: 80%;
+        width: 70%;
+        background-color: #00011f;
+        right: -12%;
+        top: -12%;
+        animation-delay: 2s;
+    }
+
+    div:nth-child(3) {
+        height: 65%;
+        width: 80%;
+        background-color: #dd1e0c;
+        right: -20%;
+        bottom: -15%;
+        animation-delay: 0.3s;
+    }
+    div:nth-child(4) {
+        height: 50%;
+        width: 75%;
+        background-color: #220150;
+        left: -18%;
+        bottom: -10%;
+        animation-delay: 1.2s;
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: -5.62rem;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
